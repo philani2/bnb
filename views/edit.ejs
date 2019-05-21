@@ -1,0 +1,55 @@
+<% include nav.ejs %>
+<main> 
+    <div class="container">
+        <h3 class="center">Update Your Property</h5>
+    <div class="row">
+            <form action ="/landlord/<%= user._id %>?_method=PUT" method ="POST" >
+                <input type="hidden" name="_method" value="put">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name = "location" value= "<%= user.username %>">
+                <label for="location">Location</label>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="input-field">
+                    <input type="text" name = "price" value="<%= data.price %>">
+                    <label for="price">Price</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <h6>Describe your place</h6>
+                    <input type ="text" name="body" value="<%= data.body %>">
+                </div>
+            </div>
+            <div class="row">
+                <h5>Upload Pictures</h5> 
+            <div class="file-field input-field">
+                    <div class="waves-effect waves-light btn">
+                        <span>Add picture</span>
+                        <input type="file" multiple>
+                    </div>
+                    <div class="file-path-wrapper">
+                    </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <select name="status">
+                        <option value="public" selected>Public</option>
+                    </select>
+                </div>
+            </div> 
+            <input type="submit" value="Update" class="btn btn-green">
+        </form>
+
+    </div>
+    </div>
+</main>
+
+ <% include footer.ejs %>
+
+

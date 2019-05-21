@@ -1,0 +1,33 @@
+<% include nav.ejs %>
+
+<main>
+    <div class="container">
+<div class="row">
+    <div class="col s12 m8">
+            <h6><%= show.location %></h6>
+        <div class="card image">
+            <img src="<%= show.image %>" class="responsive-img">
+        </div>
+        <div class="card-content">
+            <p><%= show.body %></p>
+            <p class="green-text"><%= show.price %></p>
+            <p><%= show.date %></p>
+        </div>
+        <div class="card-action">
+            <a href="/checkout/:id" class="btn btn-green">Checkout</a>
+        </div>
+    </div>
+    
+    <div class="col s12 m4">
+        <div class="card center-align">
+            <div class="card-content">
+                <span class="card-title"><%= show.user.username %></span>
+                <img src="<%= show.user.image %>" class= "responsive-img circle">
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</main>
+<% include footer.ejs %>

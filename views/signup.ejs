@@ -1,0 +1,35 @@
+<%include nav.ejs %>
+  </head>
+      <div class="container mx-auto">
+        <div class="col-md-4 mx-auto">
+            <h3>Sign Up Here</h3>
+            <a href="/auth/facebook" class="btn blue">facebook</a>
+            <a href="/auth/google" class="btn red">Google</a>
+              <!-- <%= messages %>    -->
+          <form method= "POST" action="/users/signup">
+            <div class="input-field">
+              <i class="material-icons prefix black-text">person</i>
+              <input type="text" name ="username" value = "<%=typeof name != 'undefined' ? name : '' %>">
+                <label for="username">Username</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix black-text">email</i>
+              <input type="email" name="email"   value = "<%=typeof email != 'undefined' ? email : '' %>">
+              <label for="email">Enter Email</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix black-text">lock</i>
+                <input type="password" name="password">
+                <label for="password">Password</label>
+            </div>
+            <div class="input-field">
+                <i class="material-icons prefix black-text">lock</i>
+                <input type="password" name="confpassword">
+                <label for="email">Confirm Password</label>
+            </div>
+            <input type="submit" class="btn green right btn-small" value="Sign Up">
+          </form>
+        </div>
+      </div>
+  </div> 
+</div>

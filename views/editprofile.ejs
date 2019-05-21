@@ -1,0 +1,47 @@
+<% include nav.ejs %>
+
+<div class="container mb-3">
+        <div class="col-md-6 mx-auto">    
+        <h3>Update Profile</h3>
+        <form action ="/profile/editprofile/<%= user._id %>?_method=PUT" method ="POST" >
+                <input type="hidden" name="_method" value="put">
+
+                <div class="file-field input-field">
+                <div class="btn-small">
+                        <span>File</span>
+                        <input type="file" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                </div>
+                </div>
+            <div class="input-field">
+                    <i class="material-icons prefix black-text">profile</i>
+                    <input type="text" name = "username" placeholder="Username">
+                    <label for="username"></label>
+            </div>
+            <div class="input-field">
+                    <i class="material-icons prefix black-text">profile</i>
+                    <input type="text" name = "email">
+                    <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+                    <i class="material-icons prefix black-text">profile</i>
+                    <input type="text" name = "contact">
+                    <label for="username">Contoct No</label>
+            </div>
+            <div class="input-field">
+                    <i class="material-icons prefix black-text">profile</i>
+                    <input type="text" name = "location">
+                    <label for="username">Location</label>
+            </div>
+         
+        <!-- <input type="submit" class="btn green right btn-small" value="Sign Up"> -->
+
+        <button class="btn btn-dark btn-block">Update</button>
+    </div>
+</div>
+</form>
+
+<div class="card">
+        

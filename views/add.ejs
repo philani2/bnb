@@ -1,0 +1,53 @@
+ <% include nav.ejs %>
+<main> 
+    <div class="container">
+    <div class="row">
+        <form action="/landlord" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <div class="input-field">
+                <input type="text" name = "location">
+                <label for="location">Location</label>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="input-field">
+                    <input type="text" name = "price">
+                    <label for="price">Price</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <h5>Describe your place</h5>
+                    <input type="text" name="body">
+                </div>
+            </div>
+            <div class="row">
+                <h5>Upload Pictures</h5> 
+            <div class="file-field input-field">
+                    <div class="waves-effect waves-light btn">
+                        <span>Add picture</span>
+                        <input type="file" name = "file"multiple>
+                    </div>
+                    <div class="file-path-wrapper">
+                    </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="input-field">
+                    <select name="status">
+                        <option value="public" selected>Public</option>
+                    </select>
+                </div>
+            </div> 
+            <input type="submit" value="Save" class="btn btn-block">
+        </form>
+
+    </div>
+    </div>
+</main>
+
+ <% include footer.ejs %>
+
+

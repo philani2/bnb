@@ -1,0 +1,32 @@
+<% include nav.ejs %>
+<div class="container">
+<h2>Welcome <%= user.username %> to your Dashbord</h2>
+<% if(data){ %>
+    <table class="striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Price</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <% data.forEach(function(data){ %>
+                    <tr>
+                        <td>12/09/2019</td>
+                        <td><%= data.location %></td>
+                        <td><%= data.price %></td>
+                        <td><a class="btn left-align" href="/landlord/edit/<%= user._id %>"><i class="fa fa-pencil"></i>Edit</a>
+                        <form action="/landlord/<%= user._id %>"  method="post" id="delete-form">
+                            <button type="submit" class="red"><i class="fa fa-remove"></i> Delete</button>
+                        </form>
+                        </td>
+                    </tr>
+                <% }) %>
+        </tbody>
+    </table>
+    <% }else{ %>
+    <h6>You do not have Propatie</h6>
+   <% } %>
+</div>
